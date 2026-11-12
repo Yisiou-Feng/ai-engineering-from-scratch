@@ -42,6 +42,7 @@ Build goal: not sure yet; to be discovered along the way.
 |------|--------|------|------|
 | 2026-11-12 | 00/01-dev-environment | 3/3 | Predicted Anaconda packages would carry into the new .venv (they don't; each Python has its own packages). Course env: uv + Python 3.12 .venv with RTX 3060 CUDA; on this machine use `python` after activating, not the Windows Store `python3` stub. |
 | 2026-11-12 | 00/02-git-and-collaboration | 1/3 | Thought a commit saves unstaged edits (it saves only what `git add` staged); mixed up `checkout -b` (create+switch) with fetching from GitHub; unsure why checkpoints go in .gitignore (huge + regenerable). Set up: global identity (GitHub no-reply email), fork, remotes origin=fork / upstream=course, branch `my-progress` pushed. |
+| 2026-11-12 | 00/03-gpu-setup-and-cloud | 2/3 | Missed `nvidia-smi` (picked nonexistent torch.cuda.list_devices); didn't know why synchronize() matters until the run showed 1.54 ms vs 174 ms. GPU is RTX 3060 **Laptop, 6 GB VRAM** (~2-2.5B params fp16 with margin), not 12 GB. Repaired .venv: uv's Python 3.12.16 had been deleted; reinstalled with `uv python install 3.12.16`. Warm-up: both 00/02 review items correct. |
 
 ## Review queue
-- 00/02-git-and-collaboration: `git checkout -b` vs fetch/pull; why checkpoints are gitignored
+- 00/03-gpu-setup-and-cloud: `nvidia-smi` as the GPU status check (vs torch.cuda.is_available())
