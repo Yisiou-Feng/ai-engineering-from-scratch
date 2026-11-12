@@ -41,5 +41,7 @@ Build goal: not sure yet; to be discovered along the way.
 | Date | Lesson | Quiz | Note |
 |------|--------|------|------|
 | 2026-11-12 | 00/01-dev-environment | 3/3 | Predicted Anaconda packages would carry into the new .venv (they don't; each Python has its own packages). Course env: uv + Python 3.12 .venv with RTX 3060 CUDA; on this machine use `python` after activating, not the Windows Store `python3` stub. |
+| 2026-11-12 | 00/02-git-and-collaboration | 1/3 | Thought a commit saves unstaged edits (it saves only what `git add` staged); mixed up `checkout -b` (create+switch) with fetching from GitHub; unsure why checkpoints go in .gitignore (huge + regenerable). Set up: global identity (GitHub no-reply email), fork, remotes origin=fork / upstream=course, branch `my-progress` pushed. |
 
 ## Review queue
+- 00/02-git-and-collaboration: `git checkout -b` vs fetch/pull; why checkpoints are gitignored
